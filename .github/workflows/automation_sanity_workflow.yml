@@ -1,0 +1,14 @@
+name: 'Workflow from child repository'
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    steps:
+      # Runs a single command using the runners shell
+      - name: Echo work flow name
+        shell: bash
+        run: |
+         echo "I am workflow from child repository"
